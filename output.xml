@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220531 19:59:28.974" rpa="false" schemaversion="3">
+<suite id="s1" name="Mahesh" source="C:\Users\maharra\PycharmProjects\robotframework\Testcase\mahesh.robot">
+<test id="s1-t1" name="Browser Search" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220531 19:59:29.350" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.co.in'.</msg>
+<status status="PASS" starttime="20220531 19:59:29.348" endtime="20220531 19:59:34.898"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>robotframework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:34.900" level="INFO">Typing text 'robotframework' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20220531 19:59:34.899" endtime="20220531 19:59:35.175"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:35.175" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20220531 19:59:35.175" endtime="20220531 19:59:37.385"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${M}</var>
+<arg>//div[@class="yuRUbf"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.435" level="INFO">${M} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="662a48fb-4914-44b0-bad7-46f5afad44e8")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220531 19:59:37.387" endtime="20220531 19:59:37.435"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${file}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20220531 19:59:37.438" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.436" endtime="20220531 19:59:37.439"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{M}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="662a48fb-4914-44b0-bad7-46f5afad44e8")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.504" level="INFO">${msg} = Robot Framework
+https://robotframework.org</msg>
+<status status="PASS" starttime="20220531 19:59:37.440" endtime="20220531 19:59:37.504"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.504" endtime="20220531 19:59:37.505"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.508" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.505" endtime="20220531 19:59:37.508"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.440" endtime="20220531 19:59:37.508"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="88d1c6f0-2049-4dfc-a112-8fea487942e2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.545" level="INFO">${msg} = </msg>
+<status status="PASS" starttime="20220531 19:59:37.509" endtime="20220531 19:59:37.545"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.546" endtime="20220531 19:59:37.547"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.550" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.547" endtime="20220531 19:59:37.550"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.508" endtime="20220531 19:59:37.550"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="ea4682c4-430b-4c01-8305-29330f80ba8e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.582" level="INFO">${msg} = </msg>
+<status status="PASS" starttime="20220531 19:59:37.550" endtime="20220531 19:59:37.582"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.583" endtime="20220531 19:59:37.585"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.588" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.585" endtime="20220531 19:59:37.588"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.550" endtime="20220531 19:59:37.588"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="7042c4c1-f3e7-4572-9955-5c4d7ef7bb26")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.618" level="INFO">${msg} = </msg>
+<status status="PASS" starttime="20220531 19:59:37.588" endtime="20220531 19:59:37.620"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.620" endtime="20220531 19:59:37.622"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.623" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.622" endtime="20220531 19:59:37.623"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.588" endtime="20220531 19:59:37.623"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="328af9e5-0e8b-4598-adca-defe69e2549f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.650" level="INFO">${msg} = </msg>
+<status status="PASS" starttime="20220531 19:59:37.624" endtime="20220531 19:59:37.650"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.650" endtime="20220531 19:59:37.651"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.654" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.652" endtime="20220531 19:59:37.654"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.623" endtime="20220531 19:59:37.654"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="012d471f-513e-4fcc-aa2f-8949271f2d71")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.705" level="INFO">${msg} = Robot Framework - GitHub
+https://github.com › robotframework › robotframework</msg>
+<status status="PASS" starttime="20220531 19:59:37.655" endtime="20220531 19:59:37.705"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.705" endtime="20220531 19:59:37.707"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.710" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.708" endtime="20220531 19:59:37.711"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.654" endtime="20220531 19:59:37.711"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="522a826e-e20e-44a2-bc30-471584467313")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.757" level="INFO">${msg} = Robot Framework Tutorial - Tutorialspoint
+https://www.tutorialspoint.com › robot_framework</msg>
+<status status="PASS" starttime="20220531 19:59:37.711" endtime="20220531 19:59:37.757"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.757" endtime="20220531 19:59:37.758"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.763" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.758" endtime="20220531 19:59:37.763"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.711" endtime="20220531 19:59:37.763"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="a758dd9b-fc18-4817-9363-a2d779d44986")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.807" level="INFO">${msg} = Basic concepts of Robot Framework - Robocorp
+https://robocorp.com › docs › robot-framework › basics</msg>
+<status status="PASS" starttime="20220531 19:59:37.764" endtime="20220531 19:59:37.808"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.808" endtime="20220531 19:59:37.810"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.813" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.811" endtime="20220531 19:59:37.813"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.763" endtime="20220531 19:59:37.813"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="5ff7df9e-35b3-4d7c-af45-5bf2572af0fa")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.871" level="INFO">${msg} = Robot Framework - Wikipedia
+https://en.wikipedia.org › wiki › Robot_Framework</msg>
+<status status="PASS" starttime="20220531 19:59:37.813" endtime="20220531 19:59:37.871"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.871" endtime="20220531 19:59:37.873"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.876" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.874" endtime="20220531 19:59:37.876"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.813" endtime="20220531 19:59:37.876"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="e16e8b60-0c3c-4c42-9f50-4716dee5a38c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.917" level="INFO">${msg} = Robot Framework in Python - GeeksforGeeks
+https://www.geeksforgeeks.org › robot-framework-in-p...</msg>
+<status status="PASS" starttime="20220531 19:59:37.876" endtime="20220531 19:59:37.918"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.918" endtime="20220531 19:59:37.919"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.921" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.919" endtime="20220531 19:59:37.921"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.876" endtime="20220531 19:59:37.921"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="27be7694-488f-4181-bb53-3d77e3c1195c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:37.969" level="INFO">${msg} = Robot Framework (@robotframework) / Twitter
+https://twitter.com › robotframework</msg>
+<status status="PASS" starttime="20220531 19:59:37.922" endtime="20220531 19:59:37.969"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:37.969" endtime="20220531 19:59:37.971"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:37.974" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:37.971" endtime="20220531 19:59:37.975"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.922" endtime="20220531 19:59:37.975"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a5adb59788363229b298276c8018c2", element="66564535-ad8b-40de-99f7-4d4f5bc84774")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220531 19:59:38.029" level="INFO">${msg} = Robot Framework - Google Code
+https://code.google.com › archive › robotframework</msg>
+<status status="PASS" starttime="20220531 19:59:37.975" endtime="20220531 19:59:38.029"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220531 19:59:38.029" endtime="20220531 19:59:38.030"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${file}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20220531 19:59:38.032" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\maharra\PycharmProjects\robotframework\Textfile.text"&gt;C:\Users\maharra\PycharmProjects\robotframework\Textfile.text&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220531 19:59:38.030" endtime="20220531 19:59:38.032"/>
+</kw>
+<status status="PASS" starttime="20220531 19:59:37.975" endtime="20220531 19:59:38.033"/>
+</iter>
+<status status="PASS" starttime="20220531 19:59:37.439" endtime="20220531 19:59:38.033"/>
+</for>
+<kw name="Capture Page Screenshot Snapshot.png">
+<msg timestamp="20220531 19:59:38.050" level="FAIL">No keyword with name 'Capture Page Screenshot Snapshot.png' found.</msg>
+<status status="FAIL" starttime="20220531 19:59:38.050" endtime="20220531 19:59:38.051"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220531 19:59:38.053" endtime="20220531 19:59:38.053"/>
+</kw>
+<kw name="driver.find_element_by_xpath(&quot;/html/body/div[7]/div/div[10]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div&quot;)">
+<status status="NOT RUN" starttime="20220531 19:59:38.065" endtime="20220531 19:59:38.066"/>
+</kw>
+<status status="FAIL" starttime="20220531 19:59:29.346" endtime="20220531 19:59:38.069">No keyword with name 'Capture Page Screenshot Snapshot.png' found.</status>
+</test>
+<status status="FAIL" starttime="20220531 19:59:28.979" endtime="20220531 19:59:38.077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Mahesh">Mahesh</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
